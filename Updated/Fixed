@@ -1,0 +1,10 @@
+sed 's/Zoo//g' pandas.txt > nomorezoo.txt
+sort -k2 pandas.txt | awk '{print $1,$4,$2}' >> sortedlist
+awk '{print $5}' pandas.txt | sort >> zoonames
+sed 's/female/F/g' pandas.txt | sed 's/male/M/g' > sexedited
+grep "female" pandas.txt | grep -c “October"
+ nl pandas.txt >> numbered
+ sed -n '1p; 6p; 17p' pandas.txt >> lines
+ grep -i "x" pandas.txt >>allx
+ awk '{print $5}' pandas.txt | sort | uniq -u >> location
+ sort -k4 -n pandas.txt | awk '$4 <= 10' | awk '{print $1, $4}' > youngpandas
